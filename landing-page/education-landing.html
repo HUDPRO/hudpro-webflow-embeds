@@ -1,0 +1,218 @@
+<style>
+  .edu-page {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ===== HERO ===== */
+  .edu-hero {
+    text-align: center;
+    padding: 64px 0 48px;
+    border-bottom: 2px solid #FFC72C;
+    margin-bottom: 48px;
+  }
+
+  .edu-hero__logo {
+    width: 100px;
+    height: auto;
+    margin-bottom: 24px;
+  }
+
+  .edu-hero__kicker {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #FFC72C;
+    margin: 0 0 12px 0;
+  }
+
+  .edu-hero__h1 {
+    font-size: 42px;
+    font-weight: 800;
+    color: #1F2A3A;
+    margin: 0 0 16px 0;
+    line-height: 1.15;
+  }
+
+  .edu-hero__sub {
+    font-size: 17px;
+    color: #666666;
+    max-width: 640px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+
+  .edu-hero__cta {
+    display: inline-block;
+    background: #1F2A3A;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 32px;
+    border-radius: 8px;
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+  }
+
+  .edu-hero__cta:hover {
+    background: #FFC72C !important;
+    color: #1F2A3A !important;
+  }
+
+  /* ===== GRID ===== */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding-bottom: 64px;
+  }
+
+  .edu-card {
+    background: #FFFFFF;
+    border: 1px solid #E8EBF0;
+    border-radius: 12px;
+    padding: 32px;
+    text-decoration: none;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    transition: all 0.3s ease;
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .edu-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 12px 32px rgba(31,42,58,0.12) !important;
+    border-color: #FFC72C !important;
+  }
+
+  .edu-card__number {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #FFC72C;
+    background: #1F2A3A;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 50%;
+    margin-bottom: 16px;
+  }
+
+  .edu-card h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #1F2A3A;
+    margin: 0 0 8px 0;
+    transition: color 0.3s ease;
+  }
+
+  .edu-card:hover h3 {
+    color: #FFC72C !important;
+  }
+
+  .edu-card p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #666666;
+    margin: 0;
+    line-height: 1.65;
+  }
+
+  .edu-card__arrow {
+    position: absolute;
+    bottom: 28px;
+    right: 28px;
+    font-size: 18px;
+    color: #CCD0D8;
+    transition: all 0.3s ease;
+  }
+
+  .edu-card:hover .edu-card__arrow {
+    color: #FFC72C !important;
+    transform: translateX(4px) !important;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .edu-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .edu-hero__h1 {
+      font-size: 30px;
+    }
+
+    .edu-hero {
+      padding: 40px 0 32px;
+    }
+  }
+</style>
+
+<div class="edu-page">
+
+  <!-- HERO -->
+  <div class="edu-hero">
+    <img src="https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6981db842728635ca382bac4_hudpro.avif" alt="HUDPRO" class="edu-hero__logo">
+    <p class="edu-hero__kicker">HUDPRO Education</p>
+    <h1 class="edu-hero__h1">HUD Home Education Center</h1>
+    <p class="edu-hero__sub">Everything you need to understand before buying a HUD home — from bidding rules and financing to case status meanings and investor strategy.</p>
+    <a href="https://app.hudpro.com" class="edu-hero__cta">Search HUD Homes</a>
+  </div>
+
+  <!-- CARD GRID -->
+  <div class="edu-grid">
+
+    <a href="/education/buyers-guide" class="edu-card">
+      <span class="edu-card__number">01</span>
+      <h3>Buyer's Guide</h3>
+      <p>What to do before you bid: lender prep, earnest money, timelines, and must-know steps.</p>
+      <span class="edu-card__arrow">→</span>
+    </a>
+
+    <a href="/education/case-status-explained" class="edu-card">
+      <span class="edu-card__number">02</span>
+      <h3>Case Status Explained</h3>
+      <p>What IN, IE, UI, and UK mean, what changes, and how financing + repairs are affected.</p>
+      <span class="edu-card__arrow">→</span>
+    </a>
+
+    <a href="/education/program-rules" class="edu-card">
+      <span class="edu-card__number">03</span>
+      <h3>Program Rules</h3>
+      <p>Owner-occupant vs investor rules, deadlines, and how the HUD bidding process works.</p>
+      <span class="edu-card__arrow">→</span>
+    </a>
+
+    <a href="/education/hud-vs-reo" class="edu-card">
+      <span class="edu-card__number">04</span>
+      <h3>HUD vs REO</h3>
+      <p>How HUD homes differ from bank-owned homes and other foreclosures — and why it matters.</p>
+      <span class="edu-card__arrow">→</span>
+    </a>
+
+    <a href="/education/financing-guide" class="edu-card">
+      <span class="edu-card__number">05</span>
+      <h3>Financing Guide</h3>
+      <p>FHA, 203(k), conventional, cash — what works best by condition and by case status.</p>
+      <span class="edu-card__arrow">→</span>
+    </a>
+
+    <a href="/education/glossary-faq" class="edu-card">
+      <span class="edu-card__number">06</span>
+      <h3>Glossary &amp; FAQ</h3>
+      <p>Fast definitions + answers to the questions buyers ask most.</p>
+      <span class="edu-card__arrow">→</span>
+    </a>
+
+  </div>
+
+</div>

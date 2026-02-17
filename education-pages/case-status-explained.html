@@ -1,0 +1,595 @@
+<section class="hudpro-edu">
+  <style>
+    .hudpro-edu {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #444444;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hudpro-edu__kicker {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #FFC72C;
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hudpro-edu__intro {
+      font-size: 17px;
+      color: #555555;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+
+    .hudpro-edu__toc {
+      background: #F7F8FA;
+      border-left: 4px solid #FFC72C;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .hudpro-edu__tocTitle {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1F2A3A;
+      margin-bottom: 12px;
+    }
+
+    .hudpro-edu__tocList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hudpro-edu__tocList li {
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__tocList a {
+      color: #1F2A3A;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu__tocList a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu__h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #FFC72C;
+    }
+
+    .hudpro-edu__h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hudpro-edu p {
+      margin-bottom: 16px;
+      color: #444444;
+    }
+
+    .hudpro-edu a {
+      color: #1F2A3A;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #FFC72C;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu ul,
+    .hudpro-edu ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hudpro-edu li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu strong {
+      color: #1F2A3A;
+    }
+
+    .hudpro-edu__callout {
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 6px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu__callout--summary {
+      background: #F7F8FA;
+      border-left: 4px solid #1F2A3A;
+    }
+
+    .hudpro-edu__callout--summary .hudpro-edu__h2 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .hudpro-edu__callout--tip {
+      background: #FFFBEB;
+      border-left: 4px solid #FFC72C;
+    }
+
+    .hudpro-edu__callout--watch {
+      background: #FFF5F5;
+      border-left: 4px solid #E53E3E;
+    }
+
+    .hudpro-edu__callout--info {
+      background: #EBF5FF;
+      border-left: 4px solid #3B82F6;
+    }
+
+    .hudpro-edu__callout p {
+      margin: 0;
+    }
+
+    .hudpro-edu__links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hudpro-edu__links li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .hudpro-edu__links li::before {
+      content: "\2192";
+      position: absolute;
+      left: 0;
+      color: #FFC72C;
+      font-weight: 700;
+    }
+
+    .hudpro-edu__hr {
+      border: none;
+      border-top: 1px solid #E2E8F0;
+      margin: 48px 0 24px;
+    }
+
+    .hudpro-edu__disclaimer {
+      font-size: 13px;
+      color: #888888;
+      line-height: 1.6;
+    }
+
+    .hudpro-edu__disclaimer strong {
+      color: #666666;
+    }
+
+    .hudpro-edu__table-wrap {
+      overflow-x: auto;
+      margin: 32px 0;
+    }
+
+    .hudpro-edu__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .hudpro-edu__table thead th {
+      background: #1F2A3A;
+      color: #FFFFFF;
+      font-weight: 700;
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hudpro-edu__table tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: top;
+    }
+
+    .hudpro-edu__table tbody tr:nth-child(even) {
+      background: #F7F8FA;
+    }
+
+    .hudpro-edu__table tbody tr:hover {
+      background: #FFFBEB;
+    }
+
+    .hudpro-edu__status-tag {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 2px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .hudpro-edu__status-tag--in {
+      background: #DEF7EC;
+      color: #03543F;
+    }
+
+    .hudpro-edu__status-tag--ie {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .hudpro-edu__status-tag--ui {
+      background: #FEE2E2;
+      color: #991B1B;
+    }
+
+    .hudpro-edu__status-tag--uk {
+      background: #E5E7EB;
+      color: #374151;
+    }
+  
+    /* ===== TABLET (max-width: 991px) ===== */
+    @media (max-width: 991px) {
+      .hudpro-edu {
+        padding: 32px 20px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 30px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 23px;
+        margin-top: 40px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 18px;
+        margin-top: 28px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .hudpro-edu__table {
+        min-width: 500px;
+      }
+
+      .hudpro-edu__loan-card-details {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* ===== MOBILE (max-width: 480px) ===== */
+    @media (max-width: 480px) {
+      .hudpro-edu {
+        padding: 24px 16px;
+        font-size: 15px;
+      }
+
+      .hudpro-edu__kicker {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .hudpro-edu__toc {
+        padding: 16px 18px;
+        margin-bottom: 28px;
+      }
+
+      .hudpro-edu__tocList a {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 21px;
+        margin-top: 36px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 17px;
+        margin-top: 24px;
+      }
+
+      .hudpro-edu__callout {
+        padding: 16px 18px;
+        font-size: 14px;
+        margin: 18px 0;
+      }
+
+      .hudpro-edu ul,
+      .hudpro-edu ol {
+        padding-left: 18px;
+      }
+
+      .hudpro-edu li {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .hudpro-edu__links li {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__hr {
+        margin: 36px 0 18px;
+      }
+
+      .hudpro-edu__disclaimer {
+        font-size: 12px;
+      }
+
+      .hudpro-edu__table {
+        font-size: 12px;
+        min-width: 400px;
+      }
+
+      .hudpro-edu__table thead th {
+        font-size: 11px;
+        padding: 8px 10px;
+      }
+
+      .hudpro-edu__table tbody td {
+        padding: 8px 10px;
+      }
+
+      .hudpro-edu__loan-card {
+        padding: 18px;
+      }
+
+      .hudpro-edu__loan-card-title {
+        font-size: 19px;
+      }
+
+      .hudpro-edu__loan-card-details {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+
+      .hudpro-edu__glossary-term h3 {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__glossary-term p {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__faq-item h3 {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__faq-item p {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__status-tag,
+      .hudpro-edu__phase-tag {
+        font-size: 11px;
+        padding: 2px 8px;
+      }
+    }
+
+  </style>
+
+  <header class="hudpro-edu__header">
+    <p class="hudpro-edu__kicker">HUDPRO Education</p>
+    <h1 class="hudpro-edu__h1">HUD Case Status Explained (IN, IE, UI, UK)</h1>
+    <p class="hudpro-edu__intro">
+      Every HUD property is assigned a case status code that signals its condition and FHA insurability. These codes directly affect which financing options are available, what repairs to expect, and the level of risk involved. Understanding them before you bid helps you choose the right loan path and avoid surprises during underwriting.
+    </p>
+
+    <nav class="hudpro-edu__toc" aria-label="On this page">
+      <h2 class="hudpro-edu__tocTitle">On this page</h2>
+      <ul class="hudpro-edu__tocList">
+        <li><a href="#status-comparison">Status Comparison Table</a></li>
+        <li><a href="#status-in">IN — Insurable</a></li>
+        <li><a href="#status-ie">IE — Insurable with Escrow</a></li>
+        <li><a href="#status-ui">UI — Uninsurable</a></li>
+        <li><a href="#status-uk">UK — Uninsurable (K)</a></li>
+        <li><a href="#status-howto">How to Use Status Codes</a></li>
+        <li><a href="#status-related">Related Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--summary">
+    <h2 class="hudpro-edu__h2">Quick Summary</h2>
+    <ul>
+      <li>Status codes are a <strong>signal</strong> about FHA insurability and condition — always verify specifics on the listing.</li>
+      <li>They directly influence whether standard FHA is realistic, or if you should consider <a href="/education/financing-guide">203(k), conventional, or cash</a>.</li>
+      <li><strong>IN</strong> is the smoothest path. <strong>IE</strong> adds escrow steps. <strong>UI</strong> and <strong>UK</strong> require alternative financing or cash.</li>
+      <li>Use status codes to ask better questions — not to guess.</li>
+    </ul>
+  </div>
+
+  <h2 id="status-comparison" class="hudpro-edu__h2">Status Comparison at a Glance</h2>
+  <div class="hudpro-edu__table-wrap">
+    <table class="hudpro-edu__table">
+      <thead>
+        <tr>
+          <th>Status</th>
+          <th>FHA Eligible</th>
+          <th>Repair Escrow</th>
+          <th>Common Financing</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="hudpro-edu__status-tag hudpro-edu__status-tag--in">IN</span></td>
+          <td>Yes</td>
+          <td>No</td>
+          <td>Standard FHA, Conventional, Cash</td>
+          <td>Lower</td>
+        </tr>
+        <tr>
+          <td><span class="hudpro-edu__status-tag hudpro-edu__status-tag--ie">IE</span></td>
+          <td>Yes (with escrow)</td>
+          <td>Yes</td>
+          <td>FHA with escrow, Conventional, Cash</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <td><span class="hudpro-edu__status-tag hudpro-edu__status-tag--ui">UI</span></td>
+          <td>No (standard FHA)</td>
+          <td>N/A</td>
+          <td>FHA 203(k), Conventional, Cash</td>
+          <td>Higher</td>
+        </tr>
+        <tr>
+          <td><span class="hudpro-edu__status-tag hudpro-edu__status-tag--uk">UK</span></td>
+          <td>No</td>
+          <td>N/A</td>
+          <td>Cash, select rehab programs</td>
+          <td>Highest</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="status-in" class="hudpro-edu__h2">IN — Insurable</h2>
+  <p>
+    IN indicates the property is considered insurable for standard FHA financing under typical guidelines. The home is still sold as-is, but IN properties tend to offer the lowest friction financing path with fewer lender hurdles.
+  </p>
+  <ul>
+    <li><strong>Typical fit:</strong> FHA buyers who need a straightforward underwriting process.</li>
+    <li><strong>Down payment:</strong> As low as 3.5% with FHA.</li>
+    <li><strong>Condition:</strong> Generally meets FHA minimum property standards — functional systems, no major health or safety hazards.</li>
+    <li><strong>Still do:</strong> Get a professional inspection and budget for cosmetic or minor repairs.</li>
+  </ul>
+  <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+    <p><strong>Pro Tip:</strong> IN status does not mean the home is in great condition. It means FHA will insure the mortgage. Always inspect before closing.</p>
+  </div>
+
+  <h2 id="status-ie" class="hudpro-edu__h2">IE — Insurable with Escrow</h2>
+  <p>
+    IE means the home may qualify for FHA financing, but required repairs must be addressed through a repair escrow established at closing. The escrow holds funds to ensure specific work is completed within a defined timeframe after you take ownership.
+  </p>
+  <ul>
+    <li><strong>Typical fit:</strong> FHA buyers comfortable managing defined post-closing repairs within a set deadline.</li>
+    <li><strong>Repair escrow:</strong> Funds are held at closing and released as repairs are completed and verified.</li>
+    <li><strong>Timeline:</strong> Repairs typically must be completed within a specific period — often 90 days, though terms can vary.</li>
+    <li><strong>Expect:</strong> Tighter lender documentation requirements, contractor bids, and possible re-inspection.</li>
+  </ul>
+  <div class="hudpro-edu__callout hudpro-edu__callout--watch">
+    <p><strong>Watch Out:</strong> Not all lenders handle IE escrow transactions the same way. Confirm your lender is experienced with HUD repair escrow requirements before bidding.</p>
+  </div>
+
+  <h2 id="status-ui" class="hudpro-edu__h2">UI — Uninsurable</h2>
+  <p>
+    UI means the property does not meet FHA minimum property standards in its current condition and is not eligible for standard FHA financing. The home may have significant structural, mechanical, or safety issues that must be addressed before it would qualify.
+  </p>
+  <ul>
+    <li><strong>Common financing paths:</strong> FHA 203(k) rehabilitation loan, certain conventional renovation programs, or cash.</li>
+    <li><strong>Higher risk factors:</strong> Larger repair scope, potential appraisal complications, and longer timelines.</li>
+    <li><strong>Due diligence:</strong> Get contractor estimates before bidding so you know your total investment.</li>
+    <li><strong>Investor opportunity:</strong> UI properties are where experienced investors often find value — but only with accurate renovation budgets.</li>
+  </ul>
+  <div class="hudpro-edu__callout hudpro-edu__callout--info">
+    <p><strong>Good to Know:</strong> FHA 203(k) loans roll the purchase price and renovation costs into a single mortgage. This can make UI properties accessible to owner-occupants who are willing to manage a rehab project. See the <a href="/education/financing-guide">Financing Guide</a> for details.</p>
+  </div>
+
+  <h2 id="status-uk" class="hudpro-edu__h2">UK — Uninsurable (K)</h2>
+  <p>
+    UK indicates the property is not insurable and may involve significant condition issues beyond what standard renovation programs can easily address. These properties may have environmental concerns, major structural damage, or other factors that limit financing options.
+  </p>
+  <ul>
+    <li><strong>Typical fit:</strong> Experienced buyers, investors, or rehab-capable purchasers with cash or specialized lending.</li>
+    <li><strong>Financing:</strong> Cash is the most common path. Some specialized rehab programs may apply, but availability varies by lender.</li>
+    <li><strong>Plan for:</strong> Deeper due diligence, higher contingency budgets, and potentially longer renovation timelines.</li>
+    <li><strong>Environmental factors:</strong> Some UK properties may have issues like mold, lead paint, or environmental contamination that require professional remediation.</li>
+  </ul>
+  <div class="hudpro-edu__callout hudpro-edu__callout--watch">
+    <p><strong>Watch Out:</strong> UK properties can offer strong returns for experienced investors, but underestimating renovation costs or environmental remediation is the most common mistake. Always get professional assessments before committing.</p>
+  </div>
+
+  <h2 id="status-howto" class="hudpro-edu__h2">How to Use Status Codes (Practical Rules)</h2>
+  <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+    <p><strong>Practical rule:</strong> Status codes help you choose a financing lane. Confirm your lane with your lender before you bid. Use the <a href="/education/financing-guide">Financing Guide</a> as your reference.</p>
+  </div>
+
+  <h3 class="hudpro-edu__h3">Match your financing to the status</h3>
+  <ul>
+    <li>If you want standard FHA, focus on <strong>IN</strong> or <strong>IE</strong> properties unless your lender confirms otherwise.</li>
+    <li>If you are open to rehab work, <strong>UI</strong> may still be viable with a 203(k) loan — but timelines and contractor coordination matter.</li>
+    <li>If you are cash-capable, you have the most flexibility across all statuses.</li>
+    <li>If you are an investor, you will likely encounter more <strong>UI</strong> and <strong>UK</strong> properties — build renovation costs into your bid calculations.</li>
+  </ul>
+
+  <h3 class="hudpro-edu__h3">Questions to ask before bidding</h3>
+  <ul>
+    <li>Does my lender handle this status type regularly?</li>
+    <li>What is my realistic total cost — purchase price plus repairs plus carrying costs?</li>
+    <li>Am I comfortable with the timeline and complexity this status requires?</li>
+    <li>Do I have a contractor lined up who can provide estimates quickly?</li>
+  </ul>
+
+  <h2 id="status-related" class="hudpro-edu__h2">Related Guides</h2>
+  <ul class="hudpro-edu__links">
+    <li><a href="/education/financing-guide">HUD Home Financing Guide</a></li>
+    <li><a href="/education/program-rules">HUD Program Rules &amp; Bidding Process</a></li>
+    <li><a href="/education/buyers-guide">Buyer's Guide</a></li>
+    <li><a href="/education/hud-vs-reo">HUD vs REO</a></li>
+    <li><a href="/education/glossary-faq">Glossary &amp; FAQ</a></li>
+  </ul>
+
+  <hr class="hudpro-edu__hr">
+  <p class="hudpro-edu__disclaimer">
+    <strong>Disclosure:</strong> Status codes are informational and listing-specific. Confirm financing eligibility and repair requirements with your lender and licensed agent before bidding.
+  </p>
+</section>

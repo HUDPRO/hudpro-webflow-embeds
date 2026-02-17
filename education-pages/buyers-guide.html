@@ -1,0 +1,381 @@
+<section class="hudpro-edu">
+  <style>
+    .hudpro-edu {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #444444;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hudpro-edu__kicker {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #FFC72C;
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hudpro-edu__intro {
+      font-size: 17px;
+      color: #555555;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+
+    .hudpro-edu__toc {
+      background: #F7F8FA;
+      border-left: 4px solid #FFC72C;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .hudpro-edu__tocTitle {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1F2A3A;
+      margin-bottom: 12px;
+    }
+
+    .hudpro-edu__tocList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hudpro-edu__tocList li {
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__tocList a {
+      color: #1F2A3A;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu__tocList a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu__h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #FFC72C;
+    }
+
+    .hudpro-edu__h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hudpro-edu p {
+      margin-bottom: 16px;
+      color: #444444;
+    }
+
+    .hudpro-edu a {
+      color: #1F2A3A;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #FFC72C;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu ul,
+    .hudpro-edu ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hudpro-edu li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu strong {
+      color: #1F2A3A;
+    }
+
+    .hudpro-edu__callout {
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 6px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu__callout--summary {
+      background: #F7F8FA;
+      border-left: 4px solid #1F2A3A;
+    }
+
+    .hudpro-edu__callout--summary .hudpro-edu__h2 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .hudpro-edu__callout--tip {
+      background: #FFFBEB;
+      border-left: 4px solid #FFC72C;
+    }
+
+    .hudpro-edu__callout--watch {
+      background: #FFF5F5;
+      border-left: 4px solid #E53E3E;
+    }
+
+    .hudpro-edu__callout p {
+      margin: 0;
+    }
+
+    .hudpro-edu__links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hudpro-edu__links li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .hudpro-edu__links li::before {
+      content: "\2192";
+      position: absolute;
+      left: 0;
+      color: #FFC72C;
+      font-weight: 700;
+    }
+
+    .hudpro-edu__hr {
+      border: none;
+      border-top: 1px solid #E2E8F0;
+      margin: 48px 0 24px;
+    }
+
+    .hudpro-edu__disclaimer {
+      font-size: 13px;
+      color: #888888;
+      line-height: 1.6;
+    }
+
+    .hudpro-edu__disclaimer strong {
+      color: #666666;
+    }
+
+    /* ===== TABLET (max-width: 991px) ===== */
+    @media (max-width: 991px) {
+      .hudpro-edu {
+        padding: 32px 20px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 30px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 23px;
+        margin-top: 40px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 18px;
+        margin-top: 28px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 16px;
+      }
+    }
+
+    /* ===== MOBILE (max-width: 480px) ===== */
+    @media (max-width: 480px) {
+      .hudpro-edu {
+        padding: 24px 16px;
+        font-size: 15px;
+      }
+
+      .hudpro-edu__kicker {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .hudpro-edu__toc {
+        padding: 16px 18px;
+        margin-bottom: 28px;
+      }
+
+      .hudpro-edu__tocList a {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 21px;
+        margin-top: 36px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 17px;
+        margin-top: 24px;
+      }
+
+      .hudpro-edu__callout {
+        padding: 16px 18px;
+        font-size: 14px;
+        margin: 18px 0;
+      }
+
+      .hudpro-edu ul,
+      .hudpro-edu ol {
+        padding-left: 18px;
+      }
+
+      .hudpro-edu li {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .hudpro-edu__links li {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__hr {
+        margin: 36px 0 18px;
+      }
+
+      .hudpro-edu__disclaimer {
+        font-size: 12px;
+      }
+    }
+  </style>
+
+  <header class="hudpro-edu__header">
+    <p class="hudpro-edu__kicker">HUDPRO Education</p>
+    <h1 class="hudpro-edu__h1">HUD Home Buyer's Guide</h1>
+    <p class="hudpro-edu__intro">
+      Buying a HUD home is different from purchasing a traditional property. The process follows strict rules, defined bidding timelines, and property condition classifications that directly impact financing. This guide walks you through what to prepare before you bid — so you avoid delays, missed deadlines, and costly mistakes.
+    </p>
+
+    <nav class="hudpro-edu__toc" aria-label="On this page">
+      <h2 class="hudpro-edu__tocTitle">On this page</h2>
+      <ul class="hudpro-edu__tocList">
+        <li><a href="#buyers-prep">Before You Submit a Bid</a></li>
+        <li><a href="#buyers-after">What Happens After Acceptance</a></li>
+        <li><a href="#buyers-mistakes">Common Mistakes to Avoid</a></li>
+        <li><a href="#buyers-related">Related Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--summary">
+    <h2 class="hudpro-edu__h2">Quick Summary</h2>
+    <ul>
+      <li>HUD homes are typically sold <strong>as-is</strong> — condition affects financing.</li>
+      <li>You bid through a <strong>HUD-registered agent</strong>, not directly.</li>
+      <li>After acceptance, timelines move fast — documents and deposits matter.</li>
+      <li>Understanding <a href="/education/case-status-explained">case status codes</a> helps you choose the right loan path.</li>
+    </ul>
+  </div>
+
+  <h2 id="buyers-prep" class="hudpro-edu__h2">Before You Submit a Bid</h2>
+
+  <h3 class="hudpro-edu__h3">1. Get pre-approved, not just pre-qualified</h3>
+  <p>
+    A pre-qualification is a starting point. A strong pre-approval helps ensure you can close within HUD timelines. Ask your lender what property issues will block your loan, and confirm you are using the correct product for the home's condition.
+  </p>
+  <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+    <p><strong>Pro Tip:</strong> If the property's condition is uncertain, review the listing details carefully and compare with <a href="/education/case-status-explained">HUD case status guidance</a> before committing to FHA.</p>
+  </div>
+
+  <h3 class="hudpro-edu__h3">2. Understand earnest money and be ready to move fast</h3>
+  <p>
+    HUD transactions often require an earnest money deposit shortly after acceptance. The required amount can vary by listing and price tier. Your agent should walk you through the exact requirement and timing for the specific property you are bidding on.
+  </p>
+  <div class="hudpro-edu__callout hudpro-edu__callout--watch">
+    <p><strong>Watch Out:</strong> Missing post-acceptance deadlines is one of the most common reasons deals fall apart. Treat your paperwork timeline like a closing checklist.</p>
+  </div>
+
+  <h3 class="hudpro-edu__h3">3. Work with the right real estate agent</h3>
+  <p>
+    HUD bids are submitted through a licensed agent who is registered to participate in the HUD sales platform. A HUD-experienced agent helps you avoid preventable mistakes like wrong bid terms, missing forms, or timing missteps.
+  </p>
+
+  <h3 class="hudpro-edu__h3">4. Match financing to property condition</h3>
+  <p>
+    Not every HUD home qualifies for every loan type. Before bidding, align your financing plan with the case status, visible condition, and lender requirements. For deeper guidance, see the <a href="/education/financing-guide">Financing Guide</a>.
+  </p>
+
+  <h2 id="buyers-after" class="hudpro-edu__h2">What Happens After Acceptance</h2>
+  <ol>
+    <li><strong>Acceptance notice</strong> triggers strict deadlines.</li>
+    <li><strong>Deposit and documents</strong> must be submitted correctly and on time.</li>
+    <li><strong>Inspection window</strong> begins — HUD homes are typically sold as-is.</li>
+    <li><strong>Loan underwriting</strong> moves forward based on condition and appraisal.</li>
+    <li><strong>Closing timeline</strong> is enforced — extensions may be limited.</li>
+  </ol>
+
+  <h2 id="buyers-mistakes" class="hudpro-edu__h2">Common Mistakes to Avoid</h2>
+  <ul>
+    <li>Bidding without true financing readiness or using the wrong loan type.</li>
+    <li>Ignoring <a href="/education/case-status-explained">case status</a> and its implications for repairs and financing.</li>
+    <li>Assuming HUD negotiates like a traditional seller.</li>
+    <li>Underestimating repair costs or timeline impact.</li>
+    <li>Missing acceptance paperwork deadlines.</li>
+  </ul>
+
+  <h2 id="buyers-related" class="hudpro-edu__h2">Related Guides</h2>
+  <ul class="hudpro-edu__links">
+    <li><a href="/education/program-rules">HUD Program Rules &amp; Bidding Process</a></li>
+    <li><a href="/education/case-status-explained">HUD Case Status Explained (IN, IE, UI, UK)</a></li>
+    <li><a href="/education/financing-guide">HUD Home Financing Guide</a></li>
+    <li><a href="/education/hud-vs-reo">HUD vs REO</a></li>
+    <li><a href="/education/glossary-faq">Glossary &amp; FAQ</a></li>
+  </ul>
+
+  <hr class="hudpro-edu__hr">
+  <p class="hudpro-edu__disclaimer">
+    <strong>Disclosure:</strong> Educational content only. Not legal, lending, or financial advice. Always confirm listing-specific requirements with your licensed agent and lender.
+  </p>
+</section>

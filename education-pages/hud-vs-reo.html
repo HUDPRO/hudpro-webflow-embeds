@@ -1,0 +1,641 @@
+<section class="hudpro-edu">
+  <style>
+    .hudpro-edu {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #444444;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hudpro-edu__kicker {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #FFC72C;
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hudpro-edu__intro {
+      font-size: 17px;
+      color: #555555;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+
+    .hudpro-edu__toc {
+      background: #F7F8FA;
+      border-left: 4px solid #FFC72C;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .hudpro-edu__tocTitle {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1F2A3A;
+      margin-bottom: 12px;
+    }
+
+    .hudpro-edu__tocList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hudpro-edu__tocList li {
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__tocList a {
+      color: #1F2A3A;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu__tocList a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu__h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #FFC72C;
+    }
+
+    .hudpro-edu__h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hudpro-edu p {
+      margin-bottom: 16px;
+      color: #444444;
+    }
+
+    .hudpro-edu a {
+      color: #1F2A3A;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #FFC72C;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu ul,
+    .hudpro-edu ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hudpro-edu li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu strong {
+      color: #1F2A3A;
+    }
+
+    .hudpro-edu__callout {
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 6px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu__callout--summary {
+      background: #F7F8FA;
+      border-left: 4px solid #1F2A3A;
+    }
+
+    .hudpro-edu__callout--summary .hudpro-edu__h2 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .hudpro-edu__callout--tip {
+      background: #FFFBEB;
+      border-left: 4px solid #FFC72C;
+    }
+
+    .hudpro-edu__callout--watch {
+      background: #FFF5F5;
+      border-left: 4px solid #E53E3E;
+    }
+
+    .hudpro-edu__callout--info {
+      background: #EBF5FF;
+      border-left: 4px solid #3B82F6;
+    }
+
+    .hudpro-edu__callout p {
+      margin: 0;
+    }
+
+    .hudpro-edu__links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hudpro-edu__links li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .hudpro-edu__links li::before {
+      content: "\2192";
+      position: absolute;
+      left: 0;
+      color: #FFC72C;
+      font-weight: 700;
+    }
+
+    .hudpro-edu__hr {
+      border: none;
+      border-top: 1px solid #E2E8F0;
+      margin: 48px 0 24px;
+    }
+
+    .hudpro-edu__disclaimer {
+      font-size: 13px;
+      color: #888888;
+      line-height: 1.6;
+    }
+
+    .hudpro-edu__disclaimer strong {
+      color: #666666;
+    }
+
+    .hudpro-edu__table-wrap {
+      overflow-x: auto;
+      margin: 32px 0;
+    }
+
+    .hudpro-edu__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .hudpro-edu__table thead th {
+      background: #1F2A3A;
+      color: #FFFFFF;
+      font-weight: 700;
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hudpro-edu__table tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: top;
+    }
+
+    .hudpro-edu__table tbody tr:nth-child(even) {
+      background: #F7F8FA;
+    }
+
+    .hudpro-edu__table tbody tr:hover {
+      background: #FFFBEB;
+    }
+
+    .hudpro-edu__pros-cons {
+      display: flex;
+      gap: 24px;
+      margin: 24px 0;
+      flex-wrap: wrap;
+    }
+
+    .hudpro-edu__pros-cons-col {
+      flex: 1;
+      min-width: 280px;
+      padding: 20px 24px;
+      border-radius: 6px;
+    }
+
+    .hudpro-edu__pros-cons-col--hud {
+      background: #F0F4FF;
+      border-top: 3px solid #1F2A3A;
+    }
+
+    .hudpro-edu__pros-cons-col--reo {
+      background: #FFF9EB;
+      border-top: 3px solid #FFC72C;
+    }
+
+    .hudpro-edu__pros-cons-col h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 0;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hudpro-edu__pros-cons-col ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .hudpro-edu__pros-cons-col li {
+      margin-bottom: 8px;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+  
+    /* ===== TABLET (max-width: 991px) ===== */
+    @media (max-width: 991px) {
+      .hudpro-edu {
+        padding: 32px 20px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 30px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 23px;
+        margin-top: 40px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 18px;
+        margin-top: 28px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .hudpro-edu__table {
+        min-width: 500px;
+      }
+
+      .hudpro-edu__loan-card-details {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* ===== MOBILE (max-width: 480px) ===== */
+    @media (max-width: 480px) {
+      .hudpro-edu {
+        padding: 24px 16px;
+        font-size: 15px;
+      }
+
+      .hudpro-edu__kicker {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .hudpro-edu__toc {
+        padding: 16px 18px;
+        margin-bottom: 28px;
+      }
+
+      .hudpro-edu__tocList a {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 21px;
+        margin-top: 36px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 17px;
+        margin-top: 24px;
+      }
+
+      .hudpro-edu__callout {
+        padding: 16px 18px;
+        font-size: 14px;
+        margin: 18px 0;
+      }
+
+      .hudpro-edu ul,
+      .hudpro-edu ol {
+        padding-left: 18px;
+      }
+
+      .hudpro-edu li {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .hudpro-edu__links li {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__hr {
+        margin: 36px 0 18px;
+      }
+
+      .hudpro-edu__disclaimer {
+        font-size: 12px;
+      }
+
+      .hudpro-edu__table {
+        font-size: 12px;
+        min-width: 400px;
+      }
+
+      .hudpro-edu__table thead th {
+        font-size: 11px;
+        padding: 8px 10px;
+      }
+
+      .hudpro-edu__table tbody td {
+        padding: 8px 10px;
+      }
+
+      .hudpro-edu__loan-card {
+        padding: 18px;
+      }
+
+      .hudpro-edu__loan-card-title {
+        font-size: 19px;
+      }
+
+      .hudpro-edu__loan-card-details {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+
+      .hudpro-edu__glossary-term h3 {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__glossary-term p {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__faq-item h3 {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__faq-item p {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__status-tag,
+      .hudpro-edu__phase-tag {
+        font-size: 11px;
+        padding: 2px 8px;
+      }
+    }
+
+  </style>
+
+  <header class="hudpro-edu__header">
+    <p class="hudpro-edu__kicker">HUDPRO Education</p>
+    <h1 class="hudpro-edu__h1">HUD vs REO: What Buyers Need to Know</h1>
+    <p class="hudpro-edu__intro">
+      HUD homes and bank-owned (REO) properties are both foreclosure-related opportunities — but the rules, timelines, financing options, and buyer experience are very different. This page explains the key differences so you can set the right expectations and choose the best path for your situation.
+    </p>
+
+    <nav class="hudpro-edu__toc" aria-label="On this page">
+      <h2 class="hudpro-edu__tocTitle">On this page</h2>
+      <ul class="hudpro-edu__tocList">
+        <li><a href="#compare-def">Definitions</a></li>
+        <li><a href="#compare-table">Side-by-Side Comparison</a></li>
+        <li><a href="#compare-pros">Pros and Cons</a></li>
+        <li><a href="#compare-oo">For Owner-Occupants</a></li>
+        <li><a href="#compare-investor">For Investors</a></li>
+        <li><a href="#compare-choose">How to Decide</a></li>
+        <li><a href="#compare-related">Related Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--summary">
+    <h2 class="hudpro-edu__h2">Quick Summary</h2>
+    <ul>
+      <li><strong>HUD homes</strong> follow a structured, rule-driven process with defined bidding phases and strict deadlines.</li>
+      <li><strong>REO properties</strong> are sold by banks with more flexibility in negotiation but less predictability in process.</li>
+      <li>Both are sold <strong>as-is</strong> — financing must match condition regardless of which you choose.</li>
+      <li>HUD offers <strong>owner-occupant priority</strong> that REO typically does not.</li>
+    </ul>
+  </div>
+
+  <h2 id="compare-def" class="hudpro-edu__h2">Definitions</h2>
+
+  <h3 class="hudpro-edu__h3">What is a HUD Home?</h3>
+  <p>
+    A HUD home is a property that was financed with an FHA-insured mortgage and later acquired by the Department of Housing and Urban Development after foreclosure. HUD then resells the property through a structured bidding process managed on HUD Homestore (hudhomestore.gov). Every HUD listing has a defined bidding phase, a case status code, and specific compliance requirements.
+  </p>
+
+  <h3 class="hudpro-edu__h3">What is an REO Property?</h3>
+  <p>
+    REO (Real Estate Owned) refers to a property that a bank or lender owns after a failed foreclosure auction. The bank lists it for sale through a real estate agent, often through an asset management company. REO rules, timelines, and negotiation flexibility vary significantly depending on the institution — there is no single standardized process the way HUD operates.
+  </p>
+
+  <h2 id="compare-table" class="hudpro-edu__h2">Side-by-Side Comparison</h2>
+  <div class="hudpro-edu__table-wrap">
+    <table class="hudpro-edu__table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>HUD Home</th>
+          <th>REO (Bank-Owned)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Seller</strong></td>
+          <td>U.S. Department of Housing and Urban Development</td>
+          <td>Bank, lender, or servicer</td>
+        </tr>
+        <tr>
+          <td><strong>Listing Platform</strong></td>
+          <td>HUD Homestore (hudhomestore.gov)</td>
+          <td>MLS, bank websites, asset managers</td>
+        </tr>
+        <tr>
+          <td><strong>Owner-Occupant Priority</strong></td>
+          <td>Yes — exclusive listing period</td>
+          <td>Rare — most are open to all buyers immediately</td>
+        </tr>
+        <tr>
+          <td><strong>Bidding Process</strong></td>
+          <td>Structured phases with set deadlines</td>
+          <td>Varies by bank — some use deadlines, some accept offers anytime</td>
+        </tr>
+        <tr>
+          <td><strong>How Bids Are Evaluated</strong></td>
+          <td>Highest net-to-HUD amount</td>
+          <td>Varies — banks may weigh price, financing strength, and closing speed</td>
+        </tr>
+        <tr>
+          <td><strong>Negotiation</strong></td>
+          <td>Very limited — HUD sets terms</td>
+          <td>Often possible — counteroffers, repair credits, closing cost assistance</td>
+        </tr>
+        <tr>
+          <td><strong>Condition Disclosure</strong></td>
+          <td>Case status code (IN, IE, UI, UK) plus property condition report</td>
+          <td>Varies — some banks provide disclosures, many sell with minimal information</td>
+        </tr>
+        <tr>
+          <td><strong>Repairs</strong></td>
+          <td>Sold as-is — no repair negotiation</td>
+          <td>Sold as-is typically — but some banks offer repair credits or concessions</td>
+        </tr>
+        <tr>
+          <td><strong>Agent Requirement</strong></td>
+          <td>Must use a HUD-registered broker with active NAID</td>
+          <td>Any licensed real estate agent</td>
+        </tr>
+        <tr>
+          <td><strong>Earnest Money</strong></td>
+          <td>Certified funds only — amount set by price tier</td>
+          <td>Varies by bank — personal checks sometimes accepted</td>
+        </tr>
+        <tr>
+          <td><strong>Closing Timeline</strong></td>
+          <td>Typically 30–60 days, strictly enforced</td>
+          <td>Varies — some banks are flexible, others are not</td>
+        </tr>
+        <tr>
+          <td><strong>Financing Options</strong></td>
+          <td>FHA, FHA 203(k), conventional, cash — driven by case status</td>
+          <td>Conventional, FHA (if eligible), cash — driven by bank and condition</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="compare-pros" class="hudpro-edu__h2">Pros and Cons</h2>
+  <div class="hudpro-edu__pros-cons">
+    <div class="hudpro-edu__pros-cons-col hudpro-edu__pros-cons-col--hud">
+      <h3>HUD Homes</h3>
+      <ul>
+        <li><strong>Pro:</strong> Owner-occupant priority gives first-time buyers an edge</li>
+        <li><strong>Pro:</strong> Transparent, standardized process across all listings</li>
+        <li><strong>Pro:</strong> Case status codes help you assess financing fit quickly</li>
+        <li><strong>Pro:</strong> Pricing set by independent appraisal</li>
+        <li><strong>Con:</strong> Very limited negotiation flexibility</li>
+        <li><strong>Con:</strong> Strict deadlines with little room for error</li>
+        <li><strong>Con:</strong> Requires a HUD-registered broker</li>
+      </ul>
+    </div>
+    <div class="hudpro-edu__pros-cons-col hudpro-edu__pros-cons-col--reo">
+      <h3>REO Properties</h3>
+      <ul>
+        <li><strong>Pro:</strong> More negotiation flexibility on price and terms</li>
+        <li><strong>Pro:</strong> Some banks offer repair credits or closing cost help</li>
+        <li><strong>Pro:</strong> Any licensed agent can represent you</li>
+        <li><strong>Pro:</strong> Wider inventory across different lender portfolios</li>
+        <li><strong>Con:</strong> Process varies wildly between banks</li>
+        <li><strong>Con:</strong> Typically no owner-occupant priority period</li>
+        <li><strong>Con:</strong> Less condition transparency — fewer standardized disclosures</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 id="compare-oo" class="hudpro-edu__h2">For Owner-Occupants</h2>
+  <p>
+    If you plan to live in the property, HUD homes offer a significant structural advantage. The exclusive listing period means you are not competing against investors during the initial bidding window. This alone can make the difference between winning and losing a deal in a competitive market.
+  </p>
+  <p>
+    REO properties do not typically offer this protection. You will be competing against investors, cash buyers, and other owner-occupants from day one.
+  </p>
+  <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+    <p><strong>Pro Tip:</strong> If you are a first-time buyer or need FHA financing, start with HUD listings. The owner-occupant priority and case status system are designed to give you a clearer path than most REO transactions.</p>
+  </div>
+
+  <h2 id="compare-investor" class="hudpro-edu__h2">For Investors</h2>
+  <p>
+    Investors face more restrictions on HUD properties — you cannot bid during the exclusive period, and commission rates may be lower. However, extended listings that have not sold can offer strong value since HUD may accept lower net offers on properties that have lingered.
+  </p>
+  <p>
+    REO properties offer investors more flexibility in negotiation and fewer process restrictions, but due diligence falls more heavily on you since condition disclosures are less standardized.
+  </p>
+  <div class="hudpro-edu__callout hudpro-edu__callout--info">
+    <p><strong>Good to Know:</strong> Many experienced investors monitor both HUD and REO channels simultaneously. The best deals often come from properties that have been listed longer — whether on HUD Homestore or in the bank's REO portfolio.</p>
+  </div>
+
+  <h2 id="compare-choose" class="hudpro-edu__h2">How to Decide</h2>
+  <p>
+    The right choice depends on your situation, financing, and risk tolerance. Use these questions as a starting framework:
+  </p>
+  <ul>
+    <li><strong>Am I an owner-occupant?</strong> HUD's priority period is a major advantage — start there.</li>
+    <li><strong>Do I need FHA financing?</strong> HUD's case status system tells you immediately if FHA is viable. REO properties require more independent due diligence.</li>
+    <li><strong>Am I comfortable with strict deadlines?</strong> HUD requires precision. If you prefer more flexibility, REO may be easier to navigate.</li>
+    <li><strong>Do I want to negotiate?</strong> REO offers more room. HUD is take-it-or-leave-it.</li>
+    <li><strong>Am I an investor?</strong> Look at extended HUD listings and REO inventory. Both can offer value — but the process is different for each.</li>
+  </ul>
+  <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+    <p><strong>Bottom Line:</strong> HUD homes reward preparation and process discipline. REO properties reward negotiation and flexibility. Know which game you are playing before you bid.</p>
+  </div>
+
+  <h2 id="compare-related" class="hudpro-edu__h2">Related Guides</h2>
+  <ul class="hudpro-edu__links">
+    <li><a href="/education/buyers-guide">Buyer's Guide</a></li>
+    <li><a href="/education/program-rules">HUD Program Rules &amp; Bidding Process</a></li>
+    <li><a href="/education/case-status-explained">HUD Case Status Explained (IN, IE, UI, UK)</a></li>
+    <li><a href="/education/financing-guide">HUD Home Financing Guide</a></li>
+    <li><a href="/education/glossary-faq">Glossary &amp; FAQ</a></li>
+  </ul>
+
+  <hr class="hudpro-edu__hr">
+  <p class="hudpro-edu__disclaimer">
+    <strong>Disclosure:</strong> REO policies vary by bank and servicer. HUD rules can vary by listing and region. Always confirm listing-specific terms with your licensed agent.
+  </p>
+</section>

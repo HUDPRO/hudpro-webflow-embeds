@@ -1,0 +1,838 @@
+<section class="hudpro-edu">
+  <style>
+    .hudpro-edu {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #444444;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hudpro-edu__kicker {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #FFC72C;
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hudpro-edu__intro {
+      font-size: 17px;
+      color: #555555;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+
+    .hudpro-edu__toc {
+      background: #F7F8FA;
+      border-left: 4px solid #FFC72C;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .hudpro-edu__tocTitle {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1F2A3A;
+      margin-bottom: 12px;
+    }
+
+    .hudpro-edu__tocList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hudpro-edu__tocList li {
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__tocList a {
+      color: #1F2A3A;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu__tocList a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu__h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #FFC72C;
+    }
+
+    .hudpro-edu__h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hudpro-edu p {
+      margin-bottom: 16px;
+      color: #444444;
+    }
+
+    .hudpro-edu a {
+      color: #1F2A3A;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #FFC72C;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu ul,
+    .hudpro-edu ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hudpro-edu li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu strong {
+      color: #1F2A3A;
+    }
+
+    .hudpro-edu__callout {
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 6px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu__callout--summary {
+      background: #F7F8FA;
+      border-left: 4px solid #1F2A3A;
+    }
+
+    .hudpro-edu__callout--summary .hudpro-edu__h2 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .hudpro-edu__callout--tip {
+      background: #FFFBEB;
+      border-left: 4px solid #FFC72C;
+    }
+
+    .hudpro-edu__callout--watch {
+      background: #FFF5F5;
+      border-left: 4px solid #E53E3E;
+    }
+
+    .hudpro-edu__callout--info {
+      background: #EBF5FF;
+      border-left: 4px solid #3B82F6;
+    }
+
+    .hudpro-edu__callout p {
+      margin: 0;
+    }
+
+    .hudpro-edu__links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hudpro-edu__links li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .hudpro-edu__links li::before {
+      content: "\2192";
+      position: absolute;
+      left: 0;
+      color: #FFC72C;
+      font-weight: 700;
+    }
+
+    .hudpro-edu__hr {
+      border: none;
+      border-top: 1px solid #E2E8F0;
+      margin: 48px 0 24px;
+    }
+
+    .hudpro-edu__disclaimer {
+      font-size: 13px;
+      color: #888888;
+      line-height: 1.6;
+    }
+
+    .hudpro-edu__disclaimer strong {
+      color: #666666;
+    }
+
+    .hudpro-edu__table-wrap {
+      overflow-x: auto;
+      margin: 32px 0;
+    }
+
+    .hudpro-edu__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .hudpro-edu__table thead th {
+      background: #1F2A3A;
+      color: #FFFFFF;
+      font-weight: 700;
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hudpro-edu__table tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: top;
+    }
+
+    .hudpro-edu__table tbody tr:nth-child(even) {
+      background: #F7F8FA;
+    }
+
+    .hudpro-edu__table tbody tr:hover {
+      background: #FFFBEB;
+    }
+
+    .hudpro-edu__status-tag {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 2px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .hudpro-edu__status-tag--in {
+      background: #DEF7EC;
+      color: #03543F;
+    }
+
+    .hudpro-edu__status-tag--ie {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .hudpro-edu__status-tag--ui {
+      background: #FEE2E2;
+      color: #991B1B;
+    }
+
+    .hudpro-edu__status-tag--uk {
+      background: #E5E7EB;
+      color: #374151;
+    }
+
+    .hudpro-edu__loan-card {
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 24px;
+      margin: 24px 0;
+      background: #FFFFFF;
+    }
+
+    .hudpro-edu__loan-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .hudpro-edu__loan-card-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: #1F2A3A;
+      color: #FFC72C;
+      font-weight: 700;
+      font-size: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hudpro-edu__loan-card-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin: 0;
+    }
+
+    .hudpro-edu__loan-card-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding: 12px 16px;
+      background: #F7F8FA;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .hudpro-edu__loan-card-detail {
+      display: flex;
+      flex-direction: column;
+      min-width: 140px;
+    }
+
+    .hudpro-edu__loan-card-detail-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #888888;
+      margin-bottom: 2px;
+    }
+
+    .hudpro-edu__loan-card-detail-value {
+      font-weight: 600;
+      color: #1F2A3A;
+    }
+  
+    /* ===== TABLET (max-width: 991px) ===== */
+    @media (max-width: 991px) {
+      .hudpro-edu {
+        padding: 32px 20px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 30px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 23px;
+        margin-top: 40px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 18px;
+        margin-top: 28px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .hudpro-edu__table {
+        min-width: 500px;
+      }
+
+      .hudpro-edu__loan-card-details {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* ===== MOBILE (max-width: 480px) ===== */
+    @media (max-width: 480px) {
+      .hudpro-edu {
+        padding: 24px 16px;
+        font-size: 15px;
+      }
+
+      .hudpro-edu__kicker {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .hudpro-edu__toc {
+        padding: 16px 18px;
+        margin-bottom: 28px;
+      }
+
+      .hudpro-edu__tocList a {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 21px;
+        margin-top: 36px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 17px;
+        margin-top: 24px;
+      }
+
+      .hudpro-edu__callout {
+        padding: 16px 18px;
+        font-size: 14px;
+        margin: 18px 0;
+      }
+
+      .hudpro-edu ul,
+      .hudpro-edu ol {
+        padding-left: 18px;
+      }
+
+      .hudpro-edu li {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .hudpro-edu__links li {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__hr {
+        margin: 36px 0 18px;
+      }
+
+      .hudpro-edu__disclaimer {
+        font-size: 12px;
+      }
+
+      .hudpro-edu__table {
+        font-size: 12px;
+        min-width: 400px;
+      }
+
+      .hudpro-edu__table thead th {
+        font-size: 11px;
+        padding: 8px 10px;
+      }
+
+      .hudpro-edu__table tbody td {
+        padding: 8px 10px;
+      }
+
+      .hudpro-edu__loan-card {
+        padding: 18px;
+      }
+
+      .hudpro-edu__loan-card-title {
+        font-size: 19px;
+      }
+
+      .hudpro-edu__loan-card-details {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+
+      .hudpro-edu__glossary-term h3 {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__glossary-term p {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__faq-item h3 {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__faq-item p {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__status-tag,
+      .hudpro-edu__phase-tag {
+        font-size: 11px;
+        padding: 2px 8px;
+      }
+    }
+
+  </style>
+
+  <header class="hudpro-edu__header">
+    <p class="hudpro-edu__kicker">HUDPRO Education</p>
+    <h1 class="hudpro-edu__h1">HUD Home Financing Guide</h1>
+    <p class="hudpro-edu__intro">
+      Financing a HUD home is about matching your loan type to the property's condition and case status. Not every HUD home qualifies for every mortgage product. This guide breaks down your four main options, shows how case status affects each one, and gives you a practical checklist so you do not lose time during appraisal or underwriting.
+    </p>
+
+    <nav class="hudpro-edu__toc" aria-label="On this page">
+      <h2 class="hudpro-edu__tocTitle">On this page</h2>
+      <ul class="hudpro-edu__tocList">
+        <li><a href="#fin-lanes">The 4 Financing Lanes</a></li>
+        <li><a href="#fin-compare">Loan Comparison Table</a></li>
+        <li><a href="#fin-status">Case Status &amp; Financing Matrix</a></li>
+        <li><a href="#fin-lender">Questions to Ask Your Lender</a></li>
+        <li><a href="#fin-checklist">Financing Readiness Checklist</a></li>
+        <li><a href="#fin-related">Related Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--summary">
+    <h2 class="hudpro-edu__h2">Quick Summary</h2>
+    <ul>
+      <li>The number one HUD financing risk is <strong>property condition vs loan requirements</strong>.</li>
+      <li>Case status codes signal FHA insurability — see <a href="/education/case-status-explained">Case Status Explained</a>.</li>
+      <li><strong>FHA</strong> works for IN/IE properties. <strong>203(k)</strong> opens the door for UI. <strong>Cash</strong> works everywhere.</li>
+      <li>Ask your lender what will block closing <strong>before</strong> you bid — not after.</li>
+    </ul>
+  </div>
+
+  <h2 id="fin-lanes" class="hudpro-edu__h2">The 4 Financing Lanes</h2>
+
+  <!-- LANE 1: FHA -->
+  <div class="hudpro-edu__loan-card">
+    <div class="hudpro-edu__loan-card-header">
+      <span class="hudpro-edu__loan-card-number">1</span>
+      <h3 class="hudpro-edu__loan-card-title">FHA (Standard)</h3>
+    </div>
+    <div class="hudpro-edu__loan-card-details">
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Down Payment</span>
+        <span class="hudpro-edu__loan-card-detail-value">3.5% (580+ score)</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Min Credit Score</span>
+        <span class="hudpro-edu__loan-card-detail-value">580 (or 500 with 10% down)</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Best For Status</span>
+        <span class="hudpro-edu__loan-card-detail-value">IN, IE</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">MIP Required</span>
+        <span class="hudpro-edu__loan-card-detail-value">Yes (upfront + monthly)</span>
+      </div>
+    </div>
+    <p>
+      FHA is the most common financing path for HUD home buyers, especially first-time purchasers. It offers low down payments and flexible credit requirements. However, the property must meet FHA minimum property standards — functional heating, plumbing, electrical, roof, and no major health or safety hazards.
+    </p>
+    <ul>
+      <li><strong>Pro:</strong> Low barrier to entry — 3.5% down with a 580 credit score.</li>
+      <li><strong>Pro:</strong> Widely available and familiar to most lenders.</li>
+      <li><strong>Con:</strong> Property must meet minimum standards — condition issues can block the loan.</li>
+      <li><strong>Con:</strong> Requires mortgage insurance premium (MIP) for the life of the loan in most cases.</li>
+    </ul>
+  </div>
+
+  <!-- LANE 2: FHA 203(k) -->
+  <div class="hudpro-edu__loan-card">
+    <div class="hudpro-edu__loan-card-header">
+      <span class="hudpro-edu__loan-card-number">2</span>
+      <h3 class="hudpro-edu__loan-card-title">FHA 203(k) Rehabilitation Loan</h3>
+    </div>
+    <div class="hudpro-edu__loan-card-details">
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Down Payment</span>
+        <span class="hudpro-edu__loan-card-detail-value">3.5% (on total loan amount)</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Min Credit Score</span>
+        <span class="hudpro-edu__loan-card-detail-value">580–620 (varies by lender)</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Best For Status</span>
+        <span class="hudpro-edu__loan-card-detail-value">UI, IE</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Two Versions</span>
+        <span class="hudpro-edu__loan-card-detail-value">Limited &amp; Standard</span>
+      </div>
+    </div>
+    <p>
+      The FHA 203(k) rolls the purchase price and renovation costs into a single mortgage. This makes it possible to buy properties that do not meet standard FHA requirements — as long as the after-renovation value supports the loan. It comes in two versions:
+    </p>
+    <ul>
+      <li><strong>Limited 203(k):</strong> For cosmetic and non-structural repairs up to $35,000. Simpler process, fewer contractor requirements.</li>
+      <li><strong>Standard 203(k):</strong> For major renovations including structural work. Requires a HUD consultant, detailed work plans, and draw schedules.</li>
+    </ul>
+    <div class="hudpro-edu__callout hudpro-edu__callout--watch">
+      <p><strong>Watch Out:</strong> 203(k) loans take longer to process than standard FHA. Confirm your lender can close within HUD's required timeline before you bid. Not all lenders offer 203(k) — find one with experience.</p>
+    </div>
+  </div>
+
+  <!-- LANE 3: Conventional -->
+  <div class="hudpro-edu__loan-card">
+    <div class="hudpro-edu__loan-card-header">
+      <span class="hudpro-edu__loan-card-number">3</span>
+      <h3 class="hudpro-edu__loan-card-title">Conventional</h3>
+    </div>
+    <div class="hudpro-edu__loan-card-details">
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Down Payment</span>
+        <span class="hudpro-edu__loan-card-detail-value">3%–20%+ (varies)</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Min Credit Score</span>
+        <span class="hudpro-edu__loan-card-detail-value">620+ (typically)</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Best For Status</span>
+        <span class="hudpro-edu__loan-card-detail-value">IN, some IE/UI</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">PMI</span>
+        <span class="hudpro-edu__loan-card-detail-value">Required under 20% down</span>
+      </div>
+    </div>
+    <p>
+      Conventional loans are not government-backed and follow Fannie Mae or Freddie Mac guidelines. They can be a good alternative when FHA is not viable or when you want to avoid FHA mortgage insurance. Some conventional products have more flexible appraisal standards than FHA, which can help with certain HUD properties.
+    </p>
+    <ul>
+      <li><strong>Pro:</strong> No upfront mortgage insurance premium. PMI drops off at 20% equity.</li>
+      <li><strong>Pro:</strong> Some renovation conventional products (HomeStyle, CHOICERenovation) can finance repairs.</li>
+      <li><strong>Con:</strong> Higher credit score and down payment requirements than FHA.</li>
+      <li><strong>Con:</strong> Lender overlays vary — not all conventional lenders will finance HUD properties in poor condition.</li>
+    </ul>
+    <div class="hudpro-edu__callout hudpro-edu__callout--info">
+      <p><strong>Good to Know:</strong> Fannie Mae's HomeStyle Renovation and Freddie Mac's CHOICERenovation loans are the conventional equivalents of FHA 203(k). They can finance HUD properties that need work, but they require higher credit scores and larger down payments.</p>
+    </div>
+  </div>
+
+  <!-- LANE 4: Cash -->
+  <div class="hudpro-edu__loan-card">
+    <div class="hudpro-edu__loan-card-header">
+      <span class="hudpro-edu__loan-card-number">4</span>
+      <h3 class="hudpro-edu__loan-card-title">Cash</h3>
+    </div>
+    <div class="hudpro-edu__loan-card-details">
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Down Payment</span>
+        <span class="hudpro-edu__loan-card-detail-value">100% (full purchase)</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Credit Score</span>
+        <span class="hudpro-edu__loan-card-detail-value">Not applicable</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Best For Status</span>
+        <span class="hudpro-edu__loan-card-detail-value">All (IN, IE, UI, UK)</span>
+      </div>
+      <div class="hudpro-edu__loan-card-detail">
+        <span class="hudpro-edu__loan-card-detail-label">Closing Speed</span>
+        <span class="hudpro-edu__loan-card-detail-value">Fastest option</span>
+      </div>
+    </div>
+    <p>
+      Cash purchases eliminate appraisal-related financing risk entirely. There are no lender condition requirements to meet, no mortgage insurance, and no underwriting delays. Cash buyers have maximum flexibility across all case statuses — including UK properties that most lenders will not finance.
+    </p>
+    <ul>
+      <li><strong>Pro:</strong> No appraisal requirement, no lender condition blocks, fastest closing.</li>
+      <li><strong>Pro:</strong> Works on any case status including UK.</li>
+      <li><strong>Con:</strong> Ties up significant capital — limits diversification.</li>
+      <li><strong>Con:</strong> Still need thorough inspection and accurate repair budgeting.</li>
+    </ul>
+    <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+      <p><strong>Pro Tip:</strong> Cash buyers still need proof of funds documentation submitted with their bid. Have a current bank statement or financial institution letter ready before you start bidding.</p>
+    </div>
+  </div>
+
+  <h2 id="fin-compare" class="hudpro-edu__h2">Loan Comparison Table</h2>
+  <div class="hudpro-edu__table-wrap">
+    <table class="hudpro-edu__table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>FHA</th>
+          <th>FHA 203(k)</th>
+          <th>Conventional</th>
+          <th>Cash</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Min Down Payment</strong></td>
+          <td>3.5%</td>
+          <td>3.5%</td>
+          <td>3%–20%</td>
+          <td>100%</td>
+        </tr>
+        <tr>
+          <td><strong>Min Credit Score</strong></td>
+          <td>580</td>
+          <td>580–620</td>
+          <td>620+</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td><strong>Finances Repairs</strong></td>
+          <td>No</td>
+          <td>Yes</td>
+          <td>Some products</td>
+          <td>N/A</td>
+        </tr>
+        <tr>
+          <td><strong>Mortgage Insurance</strong></td>
+          <td>Yes (MIP)</td>
+          <td>Yes (MIP)</td>
+          <td>PMI if &lt;20% down</td>
+          <td>None</td>
+        </tr>
+        <tr>
+          <td><strong>Property Standards</strong></td>
+          <td>FHA minimum</td>
+          <td>After-rehab value</td>
+          <td>Varies by lender</td>
+          <td>None required</td>
+        </tr>
+        <tr>
+          <td><strong>Closing Speed</strong></td>
+          <td>30–60 days</td>
+          <td>45–90 days</td>
+          <td>30–60 days</td>
+          <td>15–30 days</td>
+        </tr>
+        <tr>
+          <td><strong>Best Case Status</strong></td>
+          <td>IN, IE</td>
+          <td>UI, IE</td>
+          <td>IN, some IE/UI</td>
+          <td>All</td>
+        </tr>
+        <tr>
+          <td><strong>Complexity</strong></td>
+          <td>Standard</td>
+          <td>High</td>
+          <td>Standard</td>
+          <td>Low</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="fin-status" class="hudpro-edu__h2">Case Status &amp; Financing Matrix</h2>
+  <p>
+    Use this matrix as a starting point to match case status to your most likely financing options. Always confirm with your lender — overlays and property-specific conditions can change the picture.
+  </p>
+  <div class="hudpro-edu__table-wrap">
+    <table class="hudpro-edu__table">
+      <thead>
+        <tr>
+          <th>Case Status</th>
+          <th>FHA</th>
+          <th>FHA 203(k)</th>
+          <th>Conventional</th>
+          <th>Cash</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="hudpro-edu__status-tag hudpro-edu__status-tag--in">IN</span></td>
+          <td>&#10003; Strong fit</td>
+          <td>Usually not needed</td>
+          <td>&#10003; Viable</td>
+          <td>&#10003; Always</td>
+        </tr>
+        <tr>
+          <td><span class="hudpro-edu__status-tag hudpro-edu__status-tag--ie">IE</span></td>
+          <td>&#10003; With escrow</td>
+          <td>&#10003; Good option</td>
+          <td>Possible (lender dependent)</td>
+          <td>&#10003; Always</td>
+        </tr>
+        <tr>
+          <td><span class="hudpro-edu__status-tag hudpro-edu__status-tag--ui">UI</span></td>
+          <td>&#10007; Not eligible</td>
+          <td>&#10003; Primary path</td>
+          <td>Limited (renovation products)</td>
+          <td>&#10003; Always</td>
+        </tr>
+        <tr>
+          <td><span class="hudpro-edu__status-tag hudpro-edu__status-tag--uk">UK</span></td>
+          <td>&#10007; Not eligible</td>
+          <td>Rarely viable</td>
+          <td>Unlikely</td>
+          <td>&#10003; Best option</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 id="fin-lender" class="hudpro-edu__h2">Questions to Ask Your Lender</h2>
+  <p>
+    Before you bid on any HUD property, have a direct conversation with your lender. These questions can save you from wasted time and lost earnest money:
+  </p>
+  <ul>
+    <li><strong>"What property condition issues will cause my loan to fail?"</strong> — Get specific answers, not generic ones.</li>
+    <li><strong>"Can you close within 30–45 days?"</strong> — HUD timelines are firm. If your lender cannot meet them, find one who can.</li>
+    <li><strong>"Do you offer FHA 203(k)?"</strong> — Not all lenders do. If you are targeting UI properties, this matters.</li>
+    <li><strong>"What are your credit score and DTI overlays?"</strong> — Lender minimums can be higher than FHA guidelines.</li>
+    <li><strong>"Have you closed HUD transactions before?"</strong> — Experience with HUD's process, deadlines, and paperwork makes a real difference.</li>
+    <li><strong>"What documentation do you need from me right now?"</strong> — Getting pre-approved before bidding means having everything ready.</li>
+  </ul>
+
+  <h2 id="fin-checklist" class="hudpro-edu__h2">Financing Readiness Checklist</h2>
+  <ul>
+    <li>Get fully pre-approved (not just pre-qualified) before you start looking at listings.</li>
+    <li>Ask your lender the questions above — and get clear answers.</li>
+    <li>Confirm your lender can close within HUD's required timeline. Do not assume extensions will be granted.</li>
+    <li>Match your loan type to the property's <a href="/education/case-status-explained">case status</a> using the matrix above.</li>
+    <li>Budget for inspection costs, immediate repairs (if required for financing), and carrying costs during the closing period.</li>
+    <li>Have earnest money in certified funds ready before you bid.</li>
+    <li>If paying cash, prepare a current proof of funds letter or bank statement.</li>
+    <li>Align your offer strategy with <a href="/education/program-rules">HUD Program Rules</a> — know your bidding phase and deadlines.</li>
+  </ul>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+    <p><strong>Bottom Line:</strong> The right financing starts with the right lender. Find someone experienced with HUD transactions, confirm they can handle your case status, and get fully pre-approved before you ever submit a bid.</p>
+  </div>
+
+  <h2 id="fin-related" class="hudpro-edu__h2">Related Guides</h2>
+  <ul class="hudpro-edu__links">
+    <li><a href="/education/buyers-guide">Buyer's Guide</a></li>
+    <li><a href="/education/case-status-explained">HUD Case Status Explained (IN, IE, UI, UK)</a></li>
+    <li><a href="/education/program-rules">HUD Program Rules &amp; Bidding Process</a></li>
+    <li><a href="/education/hud-vs-reo">HUD vs REO</a></li>
+    <li><a href="/education/glossary-faq">Glossary &amp; FAQ</a></li>
+  </ul>
+
+  <hr class="hudpro-edu__hr">
+  <p class="hudpro-edu__disclaimer">
+    <strong>Disclosure:</strong> Financing eligibility depends on property condition, appraisal results, credit profile, and lender overlays. Loan terms, rates, and requirements change frequently. Confirm all options with your lender before bidding. HUDPRO is not a lender and does not provide mortgage advice.
+  </p>
+</section>

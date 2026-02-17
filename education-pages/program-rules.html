@@ -1,0 +1,617 @@
+<section class="hudpro-edu">
+  <style>
+    .hudpro-edu {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #444444;
+      font-size: 16px;
+      line-height: 1.7;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .hudpro-edu__kicker {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #FFC72C;
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .hudpro-edu__intro {
+      font-size: 17px;
+      color: #555555;
+      margin-bottom: 32px;
+      line-height: 1.75;
+    }
+
+    .hudpro-edu__toc {
+      background: #F7F8FA;
+      border-left: 4px solid #FFC72C;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .hudpro-edu__tocTitle {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1F2A3A;
+      margin-bottom: 12px;
+    }
+
+    .hudpro-edu__tocList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .hudpro-edu__tocList li {
+      margin-bottom: 8px;
+    }
+
+    .hudpro-edu__tocList a {
+      color: #1F2A3A;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu__tocList a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu__h2 {
+      font-size: 26px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #FFC72C;
+    }
+
+    .hudpro-edu__h3 {
+      font-size: 20px;
+      font-weight: 700;
+      color: #1F2A3A;
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+
+    .hudpro-edu p {
+      margin-bottom: 16px;
+      color: #444444;
+    }
+
+    .hudpro-edu a {
+      color: #1F2A3A;
+      font-weight: 600;
+      text-decoration: underline;
+      text-decoration-color: #FFC72C;
+      text-underline-offset: 3px;
+      transition: color 0.2s ease;
+    }
+
+    .hudpro-edu a:hover {
+      color: #FFC72C;
+    }
+
+    .hudpro-edu ul,
+    .hudpro-edu ol {
+      padding-left: 24px;
+      margin-bottom: 20px;
+    }
+
+    .hudpro-edu li {
+      margin-bottom: 10px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu strong {
+      color: #1F2A3A;
+    }
+
+    .hudpro-edu__callout {
+      padding: 20px 24px;
+      margin: 24px 0;
+      border-radius: 6px;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .hudpro-edu__callout--summary {
+      background: #F7F8FA;
+      border-left: 4px solid #1F2A3A;
+    }
+
+    .hudpro-edu__callout--summary .hudpro-edu__h2 {
+      font-size: 18px;
+      margin-top: 0;
+      margin-bottom: 12px;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .hudpro-edu__callout--tip {
+      background: #FFFBEB;
+      border-left: 4px solid #FFC72C;
+    }
+
+    .hudpro-edu__callout--watch {
+      background: #FFF5F5;
+      border-left: 4px solid #E53E3E;
+    }
+
+    .hudpro-edu__callout--info {
+      background: #EBF5FF;
+      border-left: 4px solid #3B82F6;
+    }
+
+    .hudpro-edu__callout p {
+      margin: 0;
+    }
+
+    .hudpro-edu__links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .hudpro-edu__links li {
+      margin-bottom: 12px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .hudpro-edu__links li::before {
+      content: "\2192";
+      position: absolute;
+      left: 0;
+      color: #FFC72C;
+      font-weight: 700;
+    }
+
+    .hudpro-edu__hr {
+      border: none;
+      border-top: 1px solid #E2E8F0;
+      margin: 48px 0 24px;
+    }
+
+    .hudpro-edu__disclaimer {
+      font-size: 13px;
+      color: #888888;
+      line-height: 1.6;
+    }
+
+    .hudpro-edu__disclaimer strong {
+      color: #666666;
+    }
+
+    .hudpro-edu__table-wrap {
+      overflow-x: auto;
+      margin: 32px 0;
+    }
+
+    .hudpro-edu__table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .hudpro-edu__table thead th {
+      background: #1F2A3A;
+      color: #FFFFFF;
+      font-weight: 700;
+      text-align: left;
+      padding: 12px 16px;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .hudpro-edu__table tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #E2E8F0;
+      vertical-align: top;
+    }
+
+    .hudpro-edu__table tbody tr:nth-child(even) {
+      background: #F7F8FA;
+    }
+
+    .hudpro-edu__table tbody tr:hover {
+      background: #FFFBEB;
+    }
+
+    .hudpro-edu__phase-tag {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 2px 10px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .hudpro-edu__phase-tag--exclusive {
+      background: #DEF7EC;
+      color: #03543F;
+    }
+
+    .hudpro-edu__phase-tag--all {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+
+    .hudpro-edu__phase-tag--extended {
+      background: #E5E7EB;
+      color: #374151;
+    }
+  
+    /* ===== TABLET (max-width: 991px) ===== */
+    @media (max-width: 991px) {
+      .hudpro-edu {
+        padding: 32px 20px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 30px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 23px;
+        margin-top: 40px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 18px;
+        margin-top: 28px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__table-wrap {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .hudpro-edu__table {
+        min-width: 500px;
+      }
+
+      .hudpro-edu__loan-card-details {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    /* ===== MOBILE (max-width: 480px) ===== */
+    @media (max-width: 480px) {
+      .hudpro-edu {
+        padding: 24px 16px;
+        font-size: 15px;
+      }
+
+      .hudpro-edu__kicker {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+
+      .hudpro-edu__h1 {
+        font-size: 26px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__intro {
+        font-size: 15px;
+        margin-bottom: 24px;
+      }
+
+      .hudpro-edu__toc {
+        padding: 16px 18px;
+        margin-bottom: 28px;
+      }
+
+      .hudpro-edu__tocList a {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__h2 {
+        font-size: 21px;
+        margin-top: 36px;
+        margin-bottom: 12px;
+      }
+
+      .hudpro-edu__h3 {
+        font-size: 17px;
+        margin-top: 24px;
+      }
+
+      .hudpro-edu__callout {
+        padding: 16px 18px;
+        font-size: 14px;
+        margin: 18px 0;
+      }
+
+      .hudpro-edu ul,
+      .hudpro-edu ol {
+        padding-left: 18px;
+      }
+
+      .hudpro-edu li {
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      .hudpro-edu__links li {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__hr {
+        margin: 36px 0 18px;
+      }
+
+      .hudpro-edu__disclaimer {
+        font-size: 12px;
+      }
+
+      .hudpro-edu__table {
+        font-size: 12px;
+        min-width: 400px;
+      }
+
+      .hudpro-edu__table thead th {
+        font-size: 11px;
+        padding: 8px 10px;
+      }
+
+      .hudpro-edu__table tbody td {
+        padding: 8px 10px;
+      }
+
+      .hudpro-edu__loan-card {
+        padding: 18px;
+      }
+
+      .hudpro-edu__loan-card-title {
+        font-size: 19px;
+      }
+
+      .hudpro-edu__loan-card-details {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+
+      .hudpro-edu__glossary-term h3 {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__glossary-term p {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__faq-item h3 {
+        font-size: 16px;
+      }
+
+      .hudpro-edu__faq-item p {
+        font-size: 14px;
+      }
+
+      .hudpro-edu__status-tag,
+      .hudpro-edu__phase-tag {
+        font-size: 11px;
+        padding: 2px 8px;
+      }
+    }
+
+  </style>
+
+  <header class="hudpro-edu__header">
+    <p class="hudpro-edu__kicker">HUDPRO Education</p>
+    <h1 class="hudpro-edu__h1">HUD Program Rules &amp; Bidding Process</h1>
+    <p class="hudpro-edu__intro">
+      HUD homes are sold through a structured bidding system with strict deadlines and compliance requirements. If you treat a HUD offer like a normal real estate purchase, you can lose time — or lose the deal. This page explains the core rules, bidding phases, and post-acceptance requirements in plain English.
+    </p>
+
+    <nav class="hudpro-edu__toc" aria-label="On this page">
+      <h2 class="hudpro-edu__tocTitle">On this page</h2>
+      <ul class="hudpro-edu__tocList">
+        <li><a href="#rules-phases">Bidding Phases</a></li>
+        <li><a href="#rules-oo">Owner-Occupant vs Investor</a></li>
+        <li><a href="#rules-bidding">How Bidding Works</a></li>
+        <li><a href="#rules-earnest">Earnest Money Requirements</a></li>
+        <li><a href="#rules-deadlines">Deadlines &amp; After Acceptance</a></li>
+        <li><a href="#rules-mistakes">Common Disqualifiers</a></li>
+        <li><a href="#rules-related">Related Guides</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--summary">
+    <h2 class="hudpro-edu__h2">Quick Summary</h2>
+    <ul>
+      <li>HUD bidding is <strong>rule-based</strong> and <strong>deadline-driven</strong> — not negotiable like a traditional sale.</li>
+      <li>Most listings start with an <strong>exclusive owner-occupant period</strong> before investors can bid.</li>
+      <li>All bids must go through a <strong>HUD-registered broker</strong> with an active NAID.</li>
+      <li>After acceptance, paperwork timing is critical — missed steps can void a deal.</li>
+    </ul>
+  </div>
+
+  <h2 id="rules-phases" class="hudpro-edu__h2">Bidding Phases</h2>
+  <p>
+    HUD listings move through defined phases. Understanding which phase a property is in tells you who can bid and how quickly you need to act.
+  </p>
+  <div class="hudpro-edu__table-wrap">
+    <table class="hudpro-edu__table">
+      <thead>
+        <tr>
+          <th>Phase</th>
+          <th>Who Can Bid</th>
+          <th>How It Works</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="hudpro-edu__phase-tag hudpro-edu__phase-tag--exclusive">Exclusive</span></td>
+          <td>Owner-occupants only</td>
+          <td>Priority window with a set bid deadline. HUD reviews all bids received during the period and selects the highest net offer.</td>
+        </tr>
+        <tr>
+          <td><span class="hudpro-edu__phase-tag hudpro-edu__phase-tag--all">All Bidders</span></td>
+          <td>Owner-occupants and investors</td>
+          <td>Opens after the exclusive period if no bid was accepted. Both buyer types compete equally.</td>
+        </tr>
+        <tr>
+          <td><span class="hudpro-edu__phase-tag hudpro-edu__phase-tag--extended">Extended</span></td>
+          <td>All buyers</td>
+          <td>Property did not sell in earlier phases. Bids are reviewed daily or on a first-come, first-served basis. Often the best opportunity for investors.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+    <p><strong>Pro Tip:</strong> Extended listings can be a strong opportunity. These properties have been on the market longer, and HUD may accept lower net offers. Check HUD Homestore regularly for newly extended listings.</p>
+  </div>
+
+  <h2 id="rules-oo" class="hudpro-edu__h2">Owner-Occupant vs Investor</h2>
+  <p>
+    HUD gives owner-occupant buyers a meaningful advantage — priority access during the exclusive listing period. Understanding the distinction and rules for each category is essential.
+  </p>
+
+  <h3 class="hudpro-edu__h3">Owner-Occupant Requirements</h3>
+  <ul>
+    <li>Must intend to use the property as a <strong>primary residence</strong>.</li>
+    <li>Must live in the home for a <strong>minimum of 12 months</strong> after closing.</li>
+    <li>Must sign an <strong>owner-occupant certification</strong> — false certification carries federal penalties including fines and potential criminal charges.</li>
+    <li>Cannot have purchased another HUD home as an owner-occupant within the past <strong>24 months</strong> (exceptions may apply).</li>
+  </ul>
+
+  <h3 class="hudpro-edu__h3">Investor Rules</h3>
+  <ul>
+    <li>Cannot bid during the exclusive listing period.</li>
+    <li>Can bid during the all-bidders and extended listing phases.</li>
+    <li>No occupancy requirement — property can be used for rental, resale, or renovation.</li>
+    <li>HUD may offer a lower commission rate on investor purchases (varies by listing).</li>
+  </ul>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--watch">
+    <p><strong>Watch Out:</strong> Owner-occupant fraud is taken seriously. Do not certify as an owner-occupant if you plan to use the property as an investment. HUD and FHA investigate violations, and penalties can include being barred from future HUD purchases.</p>
+  </div>
+
+  <h2 id="rules-bidding" class="hudpro-edu__h2">How Bidding Works</h2>
+  <p>
+    Buyers do not submit HUD bids directly. Your licensed agent submits the bid electronically through the HUD sales platform using their NAID (Name and Address Identifier). HUD evaluates bids based on net proceeds — not just the highest purchase price.
+  </p>
+
+  <h3 class="hudpro-edu__h3">What is "Net to HUD"?</h3>
+  <p>
+    HUD calculates the net amount it will receive after deducting the broker commission and any closing cost contributions from the buyer's offer. The bid with the highest net-to-HUD amount wins — which means two offers at the same purchase price can have different outcomes depending on what the buyer is asking HUD to pay.
+  </p>
+
+  <h3 class="hudpro-edu__h3">Bid Submission Basics</h3>
+  <ul>
+    <li>Your agent submits the bid electronically through the HUD platform.</li>
+    <li>During exclusive and all-bidders periods, HUD collects bids until the deadline, then reviews all at once.</li>
+    <li>During extended listings, bids may be reviewed daily or immediately.</li>
+    <li>HUD is not a traditional negotiating seller — think process compliance first, negotiation second.</li>
+  </ul>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--info">
+    <p><strong>Good to Know:</strong> Your agent's NAID must be active and in good standing to submit bids. If your agent is not HUD-registered, they cannot participate in the process. Verify this before you start working together.</p>
+  </div>
+
+  <h2 id="rules-earnest" class="hudpro-edu__h2">Earnest Money Requirements</h2>
+  <p>
+    HUD requires an earnest money deposit with every bid. The amount depends on the purchase price, and only certified funds are accepted — no personal checks.
+  </p>
+  <div class="hudpro-edu__table-wrap">
+    <table class="hudpro-edu__table">
+      <thead>
+        <tr>
+          <th>Purchase Price</th>
+          <th>Typical Earnest Money</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Under $50,000</td>
+          <td>$500</td>
+        </tr>
+        <tr>
+          <td>$50,000 — $99,999</td>
+          <td>$1,000</td>
+        </tr>
+        <tr>
+          <td>$100,000 and above</td>
+          <td>$2,000</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li><strong>Accepted forms:</strong> Cashier's check, money order, or certified check.</li>
+    <li><strong>Personal checks are not accepted.</strong></li>
+    <li>Your broker must have certified funds ready at the time the offer is written.</li>
+    <li>If your bid is accepted, the earnest money is applied toward your closing costs.</li>
+    <li>If you default on the contract, your earnest money may be forfeited.</li>
+  </ul>
+  <div class="hudpro-edu__callout hudpro-edu__callout--tip">
+    <p><strong>Pro Tip:</strong> Have your earnest money ready before you start bidding — not after. Scrambling for certified funds after acceptance is one of the most common reasons buyers miss deadlines.</p>
+  </div>
+
+  <h2 id="rules-deadlines" class="hudpro-edu__h2">Deadlines &amp; What Happens After Acceptance</h2>
+  <p>
+    Once HUD accepts your bid, the clock starts immediately. There is very little flexibility — treat every deadline as firm.
+  </p>
+  <ol>
+    <li><strong>Acceptance notice</strong> — starts the clock. Your agent will receive notification electronically.</li>
+    <li><strong>Contract package</strong> — signed contracts, earnest money, and all required documents must be submitted within approximately <strong>48 hours</strong> of acceptance.</li>
+    <li><strong>Inspection period</strong> — schedule your inspection immediately. HUD homes are sold as-is, but you need to understand what you are buying.</li>
+    <li><strong>Financing and appraisal</strong> — your lender orders the appraisal and begins underwriting. Align your loan type with the property's <a href="/education/case-status-explained">case status</a>.</li>
+    <li><strong>Closing window</strong> — typically <strong>30 to 60 days</strong> from acceptance depending on financing type. Cash purchases may close faster. Extensions are limited and not guaranteed.</li>
+  </ol>
+
+  <div class="hudpro-edu__callout hudpro-edu__callout--watch">
+    <p><strong>Watch Out:</strong> The 48-hour contract package deadline is where most deals fail. Have your documents, earnest money, and agent aligned before you ever submit a bid.</p>
+  </div>
+
+  <h2 id="rules-mistakes" class="hudpro-edu__h2">Common Disqualifiers</h2>
+  <ul>
+    <li>Late or incomplete document submission after acceptance.</li>
+    <li>Bid terms that do not match listing requirements.</li>
+    <li>Financing that cannot close within required timelines.</li>
+    <li>Misunderstanding <a href="/education/case-status-explained">case status</a> and its impact on loan eligibility and repairs.</li>
+    <li>Using an agent who is not HUD-registered or whose NAID is inactive.</li>
+    <li>Submitting earnest money in a non-certified form (personal checks).</li>
+    <li>False owner-occupant certification.</li>
+  </ul>
+
+  <h2 id="rules-related" class="hudpro-edu__h2">Related Guides</h2>
+  <ul class="hudpro-edu__links">
+    <li><a href="/education/buyers-guide">Buyer's Guide</a></li>
+    <li><a href="/education/case-status-explained">HUD Case Status Explained (IN, IE, UI, UK)</a></li>
+    <li><a href="/education/financing-guide">HUD Home Financing Guide</a></li>
+    <li><a href="/education/hud-vs-reo">HUD vs REO</a></li>
+    <li><a href="/education/glossary-faq">Glossary &amp; FAQ</a></li>
+  </ul>
+
+  <hr class="hudpro-edu__hr">
+  <p class="hudpro-edu__disclaimer">
+    <strong>Disclosure:</strong> Program rules can vary by listing, region, and local practices. Earnest money amounts shown are typical but may differ. Confirm listing-specific deadlines and requirements with your licensed agent.
+  </p>
+</section>
