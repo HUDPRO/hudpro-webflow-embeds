@@ -1,0 +1,623 @@
+<style>
+  /* ===== RESET ===== */
+  .hp-coming * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* ===== CONTAINER ===== */
+  .hp-coming {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 40px 100px;
+    padding-top: 48px;
+    padding-bottom: 60px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: url('https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6994bd4e914c6e8afe2cebaa_HUDPRO_Large_Desktop_1920x1280_BackgroundOnly_v1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  /* Dark overlay for text readability */
+  .hp-coming::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(10, 12, 20, 0.78) 0%,
+      rgba(10, 12, 20, 0.55) 45%,
+      rgba(10, 12, 20, 0.1) 100%
+    );
+    z-index: 1;
+  }
+
+  .hp-coming > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* ===== TOP BAR ===== */
+  .hp-coming__topbar {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    z-index: 2;
+  }
+
+  /* ===== LOGO ===== */
+  .hp-coming__logo {
+    width: 200px;
+    height: auto;
+  }
+
+  /* ===== TAGLINE (top right) ===== */
+  .hp-coming__tagline-top {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #FFC72C;
+    opacity: 0.8;
+  }
+
+  /* ===== LAUNCH BADGE ===== */
+  .hp-coming__launch {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .hp-coming__launch-line {
+    width: 60px;
+    height: 2px;
+    background: rgba(255, 199, 44, 0.6);
+  }
+
+  .hp-coming__launch-text {
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFC72C;
+    text-shadow: 0 2px 12px rgba(255, 199, 44, 0.3);
+  }
+
+  /* ===== HEADLINE ===== */
+  .hp-coming__h1 {
+    font-size: 72px;
+    font-weight: 800;
+    color: #FFFFFF;
+    line-height: 1.05;
+    margin-bottom: 24px;
+    max-width: 700px;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ===== SUBTITLE ===== */
+  .hp-coming__sub {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.65;
+    max-width: 560px;
+    margin-bottom: 16px;
+  }
+
+  /* ===== TAGLINE ===== */
+  .hp-coming__tagline {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(255, 199, 44, 0.7);
+    margin: 0;
+    margin-top: 12px;
+    text-align: center;
+    align-self: center;
+  }
+
+  /* ===== CTA SPACER ===== */
+  .hp-coming__spacer {
+    flex-grow: 1;
+  }
+
+  /* ===== CTA BUTTONS ===== */
+  .hp-coming__ctas {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .hp-coming__cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 48px;
+    border-radius: 14px;
+    text-decoration: none;
+    min-width: 300px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .hp-coming__cta-label {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+  }
+
+  .hp-coming__cta-action {
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+  }
+
+  /* Primary — Gold */
+  .hp-coming__cta--gold {
+    background: #FFC72C;
+    color: #1F2A3A;
+    box-shadow: 0 2px 12px rgba(255, 199, 44, 0.3);
+  }
+
+  .hp-coming__cta--gold:hover {
+    background: #E6B320 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 24px rgba(255, 199, 44, 0.4) !important;
+  }
+
+  .hp-coming__cta--gold .hp-coming__cta-label {
+    color: rgba(31, 42, 58, 0.7);
+  }
+
+  .hp-coming__cta--gold .hp-coming__cta-action {
+    color: #1F2A3A;
+  }
+
+  /* Secondary — Navy */
+  .hp-coming__cta--navy {
+    background: #1F2A3A;
+    color: #FFFFFF;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 199, 44, 0.25);
+  }
+
+  .hp-coming__cta--navy:hover {
+    background: #172233 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+    border-color: rgba(255, 199, 44, 0.6) !important;
+  }
+
+  .hp-coming__cta--navy .hp-coming__cta-label {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .hp-coming__cta--navy .hp-coming__cta-action {
+    color: #FFC72C;
+  }
+
+  /* ===== MICROCOPY ===== */
+  .hp-coming__micro {
+    margin-top: 24px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.03em;
+  }
+
+  .hp-coming__micro span {
+    color: rgba(255, 199, 44, 0.6);
+  }
+
+  /* ===== LAPTOP (max-width: 1440px) ===== */
+  @media (max-width: 1440px) {
+    .hp-coming {
+      background-image: url('https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6994bd4e81c47ef270d0ba22_HUDPRO_Desktop_1440x960_BackgroundOnly_v1.png');
+      padding: 48px 56px;
+      padding-bottom: 52px;
+    }
+
+    .hp-coming__topbar {
+      right: 50px;
+      top: 40px;
+    }
+
+    .hp-coming__logo {
+      width: 120px;
+    }
+
+    .hp-coming__launch-text {
+      font-size: 22px;
+    }
+
+    .hp-coming__launch-line {
+      width: 36px;
+    }
+
+    .hp-coming__tagline {
+      font-size: 11px;
+    }
+
+    .hp-coming__h1 {
+      font-size: 48px;
+      max-width: 500px;
+    }
+
+    .hp-coming__sub {
+      font-size: 17px;
+      max-width: 440px;
+    }
+
+    .hp-coming__ctas {
+      gap: 20px;
+    }
+
+    .hp-coming__cta {
+      min-width: 220px;
+      padding: 16px 30px;
+    }
+
+    .hp-coming__cta-label {
+      font-size: 13px;
+    }
+
+    .hp-coming__cta-action {
+      font-size: 18px;
+    }
+
+    .hp-coming__micro {
+      font-size: 12px;
+    }
+  }
+
+  /* ===== TABLET (max-width: 991px) ===== */
+  @media (max-width: 991px) {
+    .hp-coming {
+      background-image: url('https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6994bd4e8220a4f9e2493936_HUDPRO_Tablet_991x660_BackgroundOnly_v1.png');
+      padding: 40px 40px;
+      padding-bottom: 52px;
+      min-height: 100vh;
+    }
+
+    .hp-coming::before {
+      background: linear-gradient(
+        to right,
+        rgba(10, 12, 20, 0.82) 0%,
+        rgba(10, 12, 20, 0.6) 50%,
+        rgba(10, 12, 20, 0.15) 100%
+      );
+    }
+
+    .hp-coming__topbar {
+      position: relative;
+      top: auto;
+      right: auto;
+      align-items: flex-start;
+      margin-bottom: 24px;
+    }
+
+    .hp-coming__logo {
+      width: 100px;
+    }
+
+    .hp-coming__launch-text {
+      font-size: 20px;
+    }
+
+    .hp-coming__launch-line {
+      width: 32px;
+    }
+
+    .hp-coming__tagline {
+      font-size: 10px;
+      text-align: left;
+      align-self: flex-start;
+    }
+
+    .hp-coming__h1 {
+      font-size: 44px;
+      max-width: 460px;
+    }
+
+    .hp-coming__sub {
+      font-size: 16px;
+      max-width: 420px;
+    }
+
+    .hp-coming__ctas {
+      gap: 18px;
+    }
+
+    .hp-coming__cta {
+      min-width: 210px;
+      padding: 16px 28px;
+    }
+
+    .hp-coming__cta-label {
+      font-size: 13px;
+    }
+
+    .hp-coming__cta-action {
+      font-size: 18px;
+    }
+  }
+
+  /* ===== MOBILE LANDSCAPE (max-width: 767px) ===== */
+  @media (max-width: 767px) {
+    .hp-coming {
+      background-image: url('https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6994bd4e8220a4f9e2493939_HUDPRO_MobileLandscape_767x511_BackgroundOnly_v1.png');
+      padding: 32px 32px;
+      min-height: 100vh;
+      justify-content: flex-end;
+      padding-bottom: 48px;
+    }
+
+    .hp-coming::before {
+      background: linear-gradient(
+        to top,
+        rgba(10, 12, 20, 0.88) 0%,
+        rgba(10, 12, 20, 0.5) 50%,
+        rgba(10, 12, 20, 0.15) 100%
+      );
+    }
+
+    .hp-coming__logo {
+      width: 80px;
+      margin-bottom: 16px;
+    }
+
+    .hp-coming__topbar {
+      position: relative;
+      top: auto;
+      right: auto;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .hp-coming__launch {
+      margin-bottom: 16px;
+    }
+
+    .hp-coming__launch-text {
+      font-size: 18px;
+    }
+
+    .hp-coming__h1 {
+      font-size: 38px;
+      max-width: 100%;
+      margin-bottom: 14px;
+    }
+
+    .hp-coming__sub {
+      font-size: 16px;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .hp-coming__tagline {
+      font-size: 11px;
+      margin-bottom: 28px;
+    }
+
+    .hp-coming__ctas {
+      gap: 12px;
+      width: 100%;
+    }
+
+    .hp-coming__cta {
+      min-width: unset;
+      flex: 1;
+      padding: 14px 20px;
+    }
+
+    .hp-coming__cta-label {
+      font-size: 12px;
+    }
+
+    .hp-coming__cta-action {
+      font-size: 16px;
+    }
+  }
+
+  /* ===== MOBILE PORTRAIT (max-width: 478px) ===== */
+  @media (max-width: 478px) {
+    .hp-coming {
+      background-image: url('https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6994bd4e0d4783b2964aaf91_HUDPRO_Webflow_Mobile_Portrait_479x900_BackgroundOnly_v1.png');
+      padding: 40px 24px;
+      min-height: 100vh;
+      justify-content: flex-end;
+      padding-bottom: 56px;
+    }
+
+    .hp-coming::before {
+      background: linear-gradient(
+        to top,
+        rgba(10, 12, 20, 0.92) 0%,
+        rgba(10, 12, 20, 0.65) 35%,
+        rgba(10, 12, 20, 0.15) 65%,
+        transparent 100%
+      );
+    }
+
+    .hp-coming__logo {
+      width: 72px;
+      margin-bottom: 18px;
+    }
+
+    .hp-coming__topbar {
+      position: relative;
+      top: auto;
+      right: auto;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .hp-coming__launch-line {
+      width: 28px;
+    }
+
+    .hp-coming__launch-text {
+      font-size: 16px;
+      letter-spacing: 0.2em;
+    }
+
+    .hp-coming__h1 {
+      font-size: 36px;
+      max-width: 100%;
+    }
+
+    .hp-coming__sub {
+      font-size: 16px;
+      max-width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .hp-coming__tagline {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      margin-bottom: 32px;
+    }
+
+    .hp-coming__ctas {
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+    }
+
+    .hp-coming__cta {
+      width: 100%;
+      padding: 16px 24px;
+    }
+
+    .hp-coming__cta-action {
+      font-size: 18px;
+    }
+
+    .hp-coming__micro {
+      font-size: 13px;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  /* ===== SMALL MOBILE (max-width: 320px) ===== */
+  @media (max-width: 320px) {
+    .hp-coming {
+      background-image: url('https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6994bd4d656353d00dd96102_HUDPRO_SaaS_Background_Small_Mobile_320.png');
+      padding: 32px 16px;
+      padding-bottom: 44px;
+    }
+
+    .hp-coming__logo {
+      width: 60px;
+    }
+
+    .hp-coming__topbar {
+      margin-bottom: 12px;
+    }
+
+    .hp-coming__h1 {
+      font-size: 26px;
+    }
+
+    .hp-coming__sub {
+      font-size: 14px;
+    }
+
+    .hp-coming__cta-label {
+      font-size: 11px;
+    }
+
+    .hp-coming__cta-action {
+      font-size: 16px;
+    }
+
+    .hp-coming__micro {
+      font-size: 12px;
+    }
+  }
+</style>
+
+<div class="hp-coming">
+
+  <!-- Top Bar: Logo + Launch Badge + Tagline (right-aligned) -->
+  <div class="hp-coming__topbar">
+    <img src="https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6981db842728635ca382bac4_hudpro.avif" alt="HUDPRO" class="hp-coming__logo">
+    <div class="hp-coming__launch">
+      <div class="hp-coming__launch-line"></div>
+      <div class="hp-coming__launch-text">Launching April 2026</div>
+      <div class="hp-coming__launch-line"></div>
+    </div>
+    <p class="hp-coming__tagline">America's HUD Property Intelligence Website</p>
+  </div>
+
+  <!-- Headline -->
+  <h1 class="hp-coming__h1">Discover HUD Homes.<br>Connect With Local Pros.</h1>
+
+  <!-- Subtitle -->
+  <p class="hp-coming__sub">A new interactive website designed to help you explore HUD homes and connect with trusted professionals near you.</p>
+
+  <!-- Spacer to push CTAs to bottom -->
+  <div class="hp-coming__spacer"></div>
+
+  <!-- CTA Buttons -->
+  <div class="hp-coming__ctas">
+    <a href="#" onclick="document.getElementById('hp-modal').style.display='flex';return false;" class="hp-coming__cta hp-coming__cta--gold">
+      <span class="hp-coming__cta-label">Looking for a HUD home?</span>
+      <span class="hp-coming__cta-action">Get Launch Alerts</span>
+    </a>
+    <a href="https://hudpro.com/for-professionals" class="hp-coming__cta hp-coming__cta--navy">
+      <span class="hp-coming__cta-label">Realtors · Lenders · Inspectors</span>
+      <span class="hp-coming__cta-action">Claim Your County Now</span>
+    </a>
+  </div>
+
+  <!-- Microcopy -->
+  <p class="hp-coming__micro"><span>✓</span> Free to join · No credit card required</p>
+
+  <!-- ===== MAILCHIMP MODAL ===== -->
+  <div id="hp-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999; justify-content:center; align-items:center; padding:20px;">
+    <div style="background:#1F2A3A; border-radius:16px; padding:40px; max-width:460px; width:100%; position:relative; box-shadow:0 20px 60px rgba(0,0,0,0.5); border:1px solid rgba(255,199,44,0.15);">
+      
+      <!-- Close button -->
+      <span onclick="document.getElementById('hp-modal').style.display='none'" style="position:absolute; top:16px; right:20px; color:rgba(255,255,255,0.4); font-size:28px; cursor:pointer; line-height:1; transition:color 0.2s;" onmouseover="this.style.color='#FFC72C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">&times;</span>
+
+      <!-- Modal header -->
+      <div style="text-align:center; margin-bottom:28px;">
+        <img src="https://cdn.prod.website-files.com/694eb3ad020c3881f1209f40/6981db842728635ca382bac4_hudpro.avif" alt="HUDPRO" style="width:72px; margin-bottom:16px;">
+        <h2 style="font-family:Arial,Helvetica,sans-serif; font-size:26px; font-weight:800; color:#FFFFFF; margin:0 0 8px;">Get Launch Alerts</h2>
+        <p style="font-family:Arial,Helvetica,sans-serif; font-size:14px; color:rgba(255,255,255,0.55); margin:0; line-height:1.5;">Be the first to know when HUDPRO goes live.<br>No spam — just one email on launch day.</p>
+      </div>
+
+      <!-- Mailchimp form -->
+      <form action="https://hudpro.us18.list-manage.com/subscribe/post?u=c48be0f1a9fa910728ddc87c7&amp;id=b390de9d1e&amp;f_id=0075ade6f0" method="post" target="_blank" style="margin:0;">
+        <input type="email" name="EMAIL" required placeholder="Enter your email" style="width:100%; padding:14px 18px; font-family:Arial,Helvetica,sans-serif; font-size:16px; border:2px solid rgba(255,199,44,0.25); border-radius:10px; background:rgba(255,255,255,0.06); color:#FFFFFF; outline:none; margin-bottom:14px; transition:border-color 0.3s;" onfocus="this.style.borderColor='#FFC72C'" onblur="this.style.borderColor='rgba(255,199,44,0.25)'">
+        <!-- Honeypot -->
+        <div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_c48be0f1a9fa910728ddc87c7_b390de9d1e" tabindex="-1" value=""></div>
+        <button type="submit" style="width:100%; padding:16px; font-family:Arial,Helvetica,sans-serif; font-size:17px; font-weight:800; background:#FFC72C; color:#1F2A3A; border:none; border-radius:10px; cursor:pointer; transition:all 0.3s ease; letter-spacing:0.02em;" onmouseover="this.style.background='#E6B320';this.style.transform='translateY(-1px)'" onmouseout="this.style.background='#FFC72C';this.style.transform='translateY(0)'">Notify Me at Launch</button>
+      </form>
+
+      <p style="font-family:Arial,Helvetica,sans-serif; font-size:11px; color:rgba(255,255,255,0.25); text-align:center; margin-top:16px;">We respect your privacy. Unsubscribe anytime.</p>
+    </div>
+  </div>
+
+</div>
