@@ -13,6 +13,7 @@ HTML embed source files for the HUDPRO education center on [hudpro.com/education
 | `education-pages/hud-vs-reo.html` | HUD vs REO | https://hudpro.com/education/hud-vs-reo |
 | `education-pages/financing-guide.html` | Financing Guide | https://hudpro.com/education/financing-guide |
 | `education-pages/glossary-faq.html` | Glossary & FAQ | https://hudpro.com/education/glossary-faq |
+| `coming-soon/coming-soon.html` | Coming Soon | https://hudpro.com/coming-soon |
 
 ## Usage
 
